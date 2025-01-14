@@ -2,7 +2,7 @@ export type siteConfig = typeof siteConfig
 
 export const siteConfig = {
     name: "Mohit",
-    description: "Software Engineer",
+    description: "personal website of mohit",
     url: "https://mohitraj.xyz",
     ogImage: "https://mohitraj.xyz/og.png",
     links: {

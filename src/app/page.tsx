@@ -20,9 +20,9 @@ export default function Page() {
           </h2>
         </div>
         <p className="text-muted-foreground space-y-4 py-4 text-[14.4px]">
-          hey, i am <span className="text-foreground font-mono">Mohit</span> aka{" "}
-          <span className="text-foreground font-mono">mahi</span>. i'm a self
-          taught{" "}
+          hi there, i am <span className="text-foreground font-mono">Mohit</span>{" "}
+          aka <span className="text-foreground font-mono">mahi</span>. i'm a 
+          self taught{" "}
           <span className="text-foreground font-mono">
             full-stack developer
           </span>{" "}

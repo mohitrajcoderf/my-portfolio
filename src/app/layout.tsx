@@ -50,7 +50,6 @@ export const viewport: Viewport = {
   ]
 };
 
-
 export default function RootLayout({
   children
 }: {
@@ -58,7 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`no-scrollbar ${inter.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

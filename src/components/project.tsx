@@ -7,13 +7,20 @@ interface ProjectProps {
     archived?: boolean;
 }
 
-const Project: React.FC<ProjectProps> = ({ href, title, description, archived }) => {
+const Project: React.FC<ProjectProps> = ({
+    href,
+    title,
+    description,
+    archived
+}) => {
     return (
         <li>
             <a
-                target='_blank'
+                target="_blank"
                 className="flex flex-col space-y-1.5 !no-underline"
-                href={href}>
+                href={href}
+                rel="noreferrer"
+            >
                 <div>
                     <span className="font-medium underline underline-offset-4 ">
                         {title}
@@ -24,12 +31,10 @@ const Project: React.FC<ProjectProps> = ({ href, title, description, archived })
                         </span>
                     )}
                 </div>
-                <span className="text-muted-foreground">
-                    {description}
-                </span>
+                <span className="text-muted-foreground">{description}</span>
             </a>
         </li>
     );
-}
+};
 
-export default Project
+export default Project;

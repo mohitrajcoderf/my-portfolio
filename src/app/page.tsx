@@ -1,7 +1,9 @@
-import Project from "@/components/project";
-import { projects } from "@/lib/constants";
-import { cn } from "@/lib/utils";
-import { Newsreader } from "next/font/google";
+import { Newsreader } from "next/font/google"
+import { cn } from "@/lib/utils"
+import { projects, socialLinks } from "@/lib/constants"
+import { Project } from "@/components/project"
+import { SocialLinks } from "@/components/socials"
+
 
 const newsreader = Newsreader({
     style: "italic",
@@ -63,18 +65,9 @@ export default function Page() {
         </h3>
         <section>
           <div className="flex items-center gap-6 ">
-            <span className="text-[15px] prose prose-zinc dark:prose-invert">
-              Email
-            </span>
-            <span className="text-[15px] prose prose-zinc dark:prose-invert">
-              Instagram
-            </span>
-            <span className="text-[15px] prose prose-zinc dark:prose-invert">
-              Github
-            </span>
-            <span className="text-[15px] prose prose-zinc dark:prose-invert">
-              X
-            </span>
+            {socialLinks.map((socials, index) => (
+              <SocialLinks {...socials} key={index} />
+            ))}
           </div>
         </section>
       </section>

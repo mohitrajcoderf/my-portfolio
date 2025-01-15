@@ -3,6 +3,12 @@ import { cn } from "@/lib/utils"
 import { projects, socialLinks } from "@/lib/constants"
 import { Project } from "@/components/project"
 import { SocialLinks } from "@/components/socials"
+import { 
+  Tooltip, 
+  TooltipContent, 
+  TooltipProvider, 
+  TooltipTrigger 
+} from "@/components/ui/tooltip"
 
 
 const newsreader = Newsreader({
@@ -14,7 +20,7 @@ export default function Page() {
   return (
     <section className="items-center gap-8 container py-3 md:py-4 space-y-12">
       {/* Name */}
-      <header className="top-0 z-50 w-full animate-slide-from-down-and-fade-1">
+      <header className="top-0 z-50 w-full animate-slide-from-down-and-fade-1 cursor-context-menu">
         <div className="flex flex-col">
           <h1 className="inline-flex text-[15px] font-medium no-underline">
             Mohit Raj
@@ -43,11 +49,26 @@ export default function Page() {
             Software Developer
           </span>{" "}
           believes in building minimal but significant things for the web.{" "}
-          Inspired by <span className="italic">Kaizen,</span> strive for
-          continuous learning and improvement, always seeking innovative ways to
-          refine my skills and knowledge.
+          Inspired by{" "}
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <span className="italic hover:underline underline-offset-4">
+                  Kaizen,{" "}
+                </span>
+              </TooltipTrigger>
+              <TooltipContent>
+                <span className="italic prose prose-zinc dark:prose-invert text-sm">
+                  (n.) philosophy of continuous improvement
+                </span>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>{" "}
+          strive for continuos learning and improvement, always seeking
+          innovative ways to refine my skills and knowledge.
         </p>
       </section>
+
       {/* Projects */}
       <section className="animate-slide-from-down-and-fade-3 space-y-4 text-sm">
         <h3 className="font-medium text-[15px]">Projects</h3>
@@ -57,6 +78,7 @@ export default function Page() {
           ))}
         </div>
       </section>
+
       {/* Contacts */}
       <section className="animate-slide-from-down-and-fade-4 space-y-4 text-sm">
         <h3 className="prose prose-zinc dark:prose-invert text-[15px] ">

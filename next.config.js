@@ -1,5 +1,11 @@
+const { withContentCollections } = require("@content-collection/next");
+
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {};
+const nextConfig = {
 
-module.exports = nextConfig;
+    // ypur next.js config
+
+};
+
+module.exports = withContentCollections(nextConfig);

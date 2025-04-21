@@ -10,12 +10,15 @@
     "biome": "biome check --write"
   },
   "dependencies": {
+    "babel-plugin-react-compiler": "^19.0.0-beta-af1b7da-20250417",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.7.4",
     "lucide-react": "^0.501.0",
-    "next": "14.2.7",
+    "next": "15.3.1",
     "react": "^18",
     "react-dom": "^18",
+    "sharp": "^0.34.1",
     "tailwind-animate": "^0.2.10",
     "tailwind-merge": "^3.2.0",
     "tailwindcss-animate": "^1.0.7"

@@ -12,12 +12,15 @@ export default function Home() {
     <PageLoadAnimationWrapper className="flex flex-col mt-16 md:mt-24 lg:mt-32 mb-32 gap-y-10 md:gap-y-12">
       <section>
         <h1 className="font-instrument-serif text-3xl md:text-4xl">
-          <span>Mohit Raj</span>
+          <span aria-hidden="true">Mohit Raj</span>
           <br />
           <Tooltip>
-            <TooltipTrigger tabIndex={0}>
+            <TooltipTrigger role="presentation">
               <span className="text-muted-foreground contrast-more:text-foreground cursor-help">
-                Web Developer & Designer
+                <span className="sr-only">Mohit Raj - </span>Web Developer & Designer
+                <span className="sr-only">
+                  . Blurring the boundaries between design and engineering.
+                </span>
               </span>
             </TooltipTrigger>
             <TooltipContent aria-hidden="true">

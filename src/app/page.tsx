@@ -1,5 +1,6 @@
 import { PageLoadAnimationWrapper } from "@/components/page-load-animation";
 import { ProjectContainer, ProjectItem } from "@/components/project";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import Link from "next/link";
 
 export default function Home() {
@@ -9,40 +10,56 @@ export default function Home() {
         <h1>
           <span>Mohit Raj</span>
           <br />
-          <span className="text-muted-foreground contrast-more:text-foreground">
-            Web Developer & Designer
-          </span>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span
+                className="text-muted-foreground contrast-more:text-foreground cursor-help"
+                role="presentation"
+              >
+                Web Developer & Designer
+                <span className="sr-only">
+                  Blurring the boundaries between design and engineering
+                </span>
+              </span>
+            </TooltipTrigger>
+            <TooltipContent aria-hidden="true">
+              <p>Blurring the boundaries between design and engineering</p>
+            </TooltipContent>
+          </Tooltip>
         </h1>
       </section>
       <section>
         <p>
-          <em>Crafting interfaces.</em> Building polished software and web
-          experiences. Experimenting with magical details in user interfaces.
+          <em>Crafting interfaces</em> with meticulous attention to detail and
+          diving deep into technical intricacies. Currently pushing pixels at{" "}
+          <Link href="https://next-motion.de" target="_blank">
+            next.motion
+          </Link>{" "}
         </p>
       </section>
       <section className="flex flex-col gap-y-4 md:gap-y-6">
-        <h2>Projects</h2>
-        <ProjectContainer>
+        <h2 id="projects">Projects</h2>
+        <ProjectContainer aria-labelledby="projects">
           <ProjectItem
-            href="#"
+            href="https://developer-docs-gallery.xyz"
             target="_blank"
-            name="Pixel Pirates"
+            name="Developers Docs Gallery"
             position="Founder"
-            summary="Game development studio"
+            summary="Documentation gallery for open-source projects"
           />
           <ProjectItem
-            href="#"
+            href="https://vercel-internship.vercel.app"
             target="_blank"
-            name="BluBlox Development"
+            name="Internship Card"
             position="Developer"
-            summary="Game development studio"
+            summary="A simple and elegant internship card"
           />
           <ProjectItem
-            href="#"
+            href="https://aiblock.netlify.app"
             target="_blank"
-            name="Luminary Games"
-            position="Co-Founder"
-            summary="Game development studio"
+            name="Ai Block"
+            position="Founder"
+            summary="Core Components For Ai Apps"
           />
           <ProjectItem
             href="#"
@@ -59,7 +76,7 @@ export default function Home() {
             summary="Simple and tasteful project management"
           />
           <ProjectItem
-            href="#"
+            href="https://create.t3.gg"
             target="_blank"
             name="Create T3 App"
             position="Contributor"
@@ -88,7 +105,7 @@ export default function Home() {
             @Mohit
           </Link>{" "}
           or email me at{" "}
-          <Link href="mailto:t-ritter-mail@web.de" target="_blank">
+          <Link href="mailto:mohitraj2546@gmail.com" target="_blank">
             mohitraj2546@gmail.com
           </Link>
         </p>

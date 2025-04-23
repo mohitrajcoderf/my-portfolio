@@ -74,7 +74,7 @@ export default function Home() {
             target="_blank"
             name="p"
             position="Creator"
-            summary="Simple and tasteful project management"
+            summary="Tasteful project management"
           />
           <ProjectItem
             href="https://create.t3.gg"
